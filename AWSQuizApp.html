@@ -4,19 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AWS-Quizzybrains</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clifford: '#da373d',
-                    }
-                }
-            }
-        }
-    </script>
+   
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,16 +16,27 @@
             font-family: 'Space Grotesk', sans-serif;
         }
     </style>
+
+    <script src="modal.js"></script>
+
 </head>
 
 <body>
     <section class="bg-white dark:bg-gray-900">
 
         <div style="background: #8745eb;" class="container px-6 py-16 mx-auto text-center">
+            <div style=" position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            background: linear-gradient(135deg, #10101455 25%, transparent 25%) -10px 0/ 20px 20px, linear-gradient(225deg, #101014 25%, transparent 25%) -10px 0/ 20px 20px, linear-gradient(315deg, #10101455 25%, transparent 25%) 0px 0/ 20px 20px, linear-gradient(45deg, #101014 25%, #e5e5f7 25%) 0px 0/ 20px 20px;
+            pointer-events: none;" class="background-overlay"></div>
             <div class="max-w-lg mx-auto">
                 <h1 style="font-size: 50px;font-weight: 900;"
                     class="text-3xl font-semibold text-gray-800 dark:text-white lg:text-4xl">QuizzyBrains</h1>
-                <p class="mt-6 text-gray-500 dark:text-gray-300">Lorem ipsum dolor sit, amet consectetur adipisicing
+                <p style="color: azure; font-weight: 600;" class="mt-6 text-gray-500 dark:text-gray-300">Lorem ipsum dolor sit, amet consectetur adipisicing
                     elit. Libero similique
                     obcaecati illum mollitia.</p>
                 <button style="background: #101014;"
@@ -57,6 +58,50 @@
 
         </div>
     </section>
+
+    <div id="complete" class="fixed inset-0 z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on modal state -->
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+
+        <div class="fixed inset-0 z-10 overflow-y-auto">
+            <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <!-- Modal panel, show/hide based on modal state -->
+                <div id="modal"
+                    class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                    <div style="background: #101014;" class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                        <div class="sm:flex sm:items-start">
+                            <div
+                                class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
+                                <svg class="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                                </svg>
+                            </div>
+                            <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                                <h3 style="color: #8745eb;" class="text-base font-semibold leading-6 text-gray-900"
+                                    id="modal-title">Website
+                                    loading notice</h3>
+                                <div class="mt-2">
+                                    <p style="color: white;" class="text-sm text-gray-500">As the website is running on
+                                        netlify and/or render
+                                        , which means that the first time you visit it, a new container needs to be
+                                        created. This can take a few seconds, so please wait patiently. If the website
+                                        does not load after 10 seconds, please let me know.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="background: #101014;" class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                        <button type="button" style="color: #101014; background: #8745eb;"
+                            class="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto">Thank
+                            you , close </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div style="background: #101014;"
         class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
@@ -82,8 +127,10 @@
             <div
                 class="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
                 <div class="flex justify-center mt-10">
+
                     <iframe style="width: 50vw;" class="object-cover w-full h-96 rounded-xl lg:w-4/5" height="499"
-                        src="https://www.youtube.com/embed/AyBmI61Jrus" frameborder="0"
+                        src="https://www.youtube.com/embed/XdxFMelXQwk"
+                        title="QuizzyBrains-harshjoshi-aws-serverless-quizapp-demo" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                 </div>
