@@ -2,6 +2,10 @@
 
 Welcome to my portfolio repository! This is where I showcase my journey in AI and MLOps.
 
+## Video Introduction
+
+[![Video Introduction](https://www.youtube.com/watch?v=4Nbw84W8Oi8)](https://www.youtube.com/watch?v=4Nbw84W8Oi8)
+
 ## About Me
 
 I'm a passionate learner exploring AI and MLOps. I excel in creating end-to-end projects and expanding my skills as a fresh graduate.
