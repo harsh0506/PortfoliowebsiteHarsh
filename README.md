@@ -4,8 +4,8 @@ Welcome to my portfolio repository! This is where I showcase my journey in AI an
 
 ## Video Introduction
 
+[![Video Introduction](https://i.stack.imgur.com/Vp2cE.png)](https://www.youtube.com/watch?v=4Nbw84W8Oi8)
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=4Nbw84W8Oi8" frameborder="0" allowfullscreen></iframe>
 
 ## About Me
 
